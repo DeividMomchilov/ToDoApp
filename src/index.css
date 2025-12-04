@@ -1,0 +1,390 @@
+/* -------------------- THEME ROOTS ------------------ */
+.light-mode {
+  background: #f3f6fa;
+  min-height: 100vh;
+  transition: background 0.3s;
+}
+.dark-mode {
+  background: #101825;
+  min-height: 100vh;
+  transition: background 0.3s;
+}
+
+/* Main container adjustments for dark mode */
+.dark-mode .todo-app {
+  background: linear-gradient(135deg,#232946 55%, #191c26 100%);
+  box-shadow: 0 9px 32px #12131a66, 0 2px 18px #11151c90;
+}
+
+.dark-mode .todo-title {
+  color: #f7f8fa;
+  text-shadow: 0 2px 8px #13264aff;
+}
+.dark-mode .todo-input {
+  border: 2px solid #3d4762;
+  background: #232947;
+  color: #cbd3ec;
+}
+.dark-mode .todo-input:focus {
+  border-color: #ffb400;
+  box-shadow: 0 0 0 3px #ffb40050;
+}
+.dark-mode .todo-add-btn {
+  background: linear-gradient(90deg,#ffb400 50%,#e05a00 100%);
+  color: #191a24;
+  box-shadow: 0 2px 6px #ffd78b33;
+}
+.dark-mode .todo-add-btn:hover,
+.dark-mode .todo-add-btn:focus {
+  background: linear-gradient(90deg,#f6ad08 60%,#f85a00 100%);
+}
+.dark-mode .todo-item {
+  background: linear-gradient(90deg, #232942 80%, #171723 100%);
+  box-shadow: 0 1.5px 10px #0e18391c, 0 2px 4px #1d2a370c;
+}
+.dark-mode .todo-text {
+  color: #f7f7fc;
+  text-shadow: 0 1px 4px #101625aa;
+}
+.dark-mode .todo-move-up-btn {
+  background: linear-gradient(90deg, #2ea076 70%, #45e1a4 100%);
+  color: #13291b;
+}
+.dark-mode .todo-move-up-btn:hover,
+.dark-mode .todo-move-up-btn:focus {
+  background: linear-gradient(90deg, #22c678 70%, #2dd890 100%);
+  box-shadow: 0 6px 24px #61eab977;
+}
+.dark-mode .todo-move-down-btn {
+  background: linear-gradient(90deg, #edc952 80%, #bc7700 100%);
+  color: #242414;
+}
+.dark-mode .todo-move-down-btn:hover,
+.dark-mode .todo-move-down-btn:focus {
+  background: linear-gradient(90deg, #efb802 80%, #816300 100%);
+  box-shadow: 0 6px 24px #ffe89c61;
+}
+.dark-mode .todo-delete-btn {
+  background: linear-gradient(90deg, #fb4141 75%, #5e2727 100%);
+}
+.dark-mode .todo-delete-btn:hover,
+.dark-mode .todo-delete-btn:focus {
+  background: linear-gradient(90deg, #be3031 70%, #f68b8b 100%);
+  box-shadow: 0 9px 30px #ffafaf95;
+}
+.dark-mode .todo-actions button[disabled] {
+  opacity: 0.35 !important;
+  filter: grayscale(60%) brightness(0.8);
+}
+/* -------------- THEME TOGGLE BUTTON -------------- */
+.theme-toggle-btn {
+  margin: 0 auto 30px auto;
+  display: block;
+  padding: 9px 28px;
+  border-radius: 7px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border: none;
+  outline: none;
+  background: linear-gradient(90deg, #3dc6ff 40%, #83ffcd 100%);
+  color: #133455;
+  box-shadow: 0 3px 24px #eaefff48;
+  cursor: pointer;
+  transition: background 0.23s, color 0.18s, box-shadow 0.24s, transform 0.16s;
+  margin-bottom: 32px;
+}
+.theme-toggle-btn:hover, .theme-toggle-btn:focus {
+  background: linear-gradient(90deg, #319ecc 60%, #20ffe4 100%);
+  color: #0e2343;
+  box-shadow: 0 8px 28px #15b3cf36;
+  transform: scale(1.07);
+}
+.dark-mode .theme-toggle-btn {
+  background: linear-gradient(90deg, #464d61 40%, #1d2531 100%);
+  color: #ffd98a;
+  box-shadow: 0 2px 14px #051f3545;
+}
+.dark-mode .theme-toggle-btn:hover, .dark-mode .theme-toggle-btn:focus {
+  background: linear-gradient(90deg, #606e90 70%, #10101f 100%);
+  color: #fab601;
+  box-shadow: 0 12px 35px #52d2ff17;
+  transform: scale(1.1);
+}
+/* -------------- LANGUAGE TOGGLE BUTTON -------------- */
+.language-toggle-btn {
+  position: absolute;
+  top: 28px;
+  right: 38px;
+  z-index: 10;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 7px;
+  background: linear-gradient(90deg,#ff7c83 30%,#ffa726 100%);
+  color: #fff;
+  font-size: 1.09rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 18px #ffa50020;
+  cursor: pointer;
+  transition: background 0.22s, color 0.16s, box-shadow 0.18s, transform 0.14s;
+}
+.language-toggle-btn:hover, .language-toggle-btn:focus {
+  background: linear-gradient(90deg,#ff564b 55%,#ffc247 100%);
+  color: #fffbe8;
+  box-shadow: 0 6px 25px #ffbc8044;
+  transform: scale(1.07);
+}
+.dark-mode .language-toggle-btn {
+  background: linear-gradient(90deg, #1d223a 25%, #2e517e 100%);
+  color: #ffe7ad;
+  box-shadow: 0 1.5px 10px #19243a44;
+}
+.dark-mode .language-toggle-btn:hover, .dark-mode .language-toggle-btn:focus {
+  background: linear-gradient(90deg, #29489f 50%, #1f293a 100%);
+  color: #ffe500;
+  box-shadow: 0 6px 22px #142d4b66;
+}
+/* ----- Ensure .todo-app has no corner leaks in both modes ----- */
+/* Ensure the app root background always matches the theme, no white leak */
+body, .light-mode, .dark-mode, .todo-app, .dark-mode .todo-app, 
+.todo-title, .dark-mode .todo-title, .todo-input, .dark-mode .todo-input, 
+.todo-add-btn, .dark-mode .todo-add-btn, 
+.todo-edit-btn, .dark-mode .todo-edit-btn, 
+.todo-move-up-btn, .dark-mode .todo-move-up-btn, 
+.todo-move-down-btn, .dark-mode .todo-move-down-btn, 
+.todo-delete-btn, .dark-mode .todo-delete-btn {
+  transition: 
+    background 0.5s cubic-bezier(0.43,0.15,0.43,1.04), 
+    color 0.44s cubic-bezier(0.43,0.15,0.43,1.04),
+    border 0.43s cubic-bezier(0.43,0.15,0.43,1.04), 
+    box-shadow 0.53s cubic-bezier(0.43,0.15,0.43,1.04);
+}
+
+/* Subtle scale animation on theme-toggle-btn click */
+.theme-toggle-btn:active, .dark-mode .theme-toggle-btn:active {
+  transform: scale(0.96) rotate(-1deg);
+  transition: transform 0.12s cubic-bezier(0.43,0.15,0.43,1.04);
+}
+
+/* Responsive styles if .bg-lang is set (Bulgarian mode) -- only FONT SIZE changes */
+.bg-lang .todo-title { font-size: 2.0rem; }
+.bg-lang .todo-input      { font-size: 1.15rem; }
+.bg-lang .todo-add-btn    { font-size: 0.96rem; }
+.bg-lang .todo-edit-btn, .bg-lang .todo-move-up-btn, .bg-lang .todo-move-down-btn, .bg-lang .todo-delete-btn { font-size: 0.98rem; }
+
+.bg-lang.dark-mode .todo-title { font-size: 2.0rem; }
+.bg-lang.dark-mode .todo-input      { font-size: 1.13rem; }
+.bg-lang.dark-mode .todo-add-btn    { font-size: 0.95rem; }
+.bg-lang.dark-mode .todo-edit-btn, .bg-lang.dark-mode .todo-move-up-btn, .bg-lang.dark-mode .todo-move-down-btn, .bg-lang.dark-mode .todo-delete-btn { font-size: 0.98rem; }
+/* ========= REST OF EXISTING LIGHT MODE STYLES ========= */
+.todo-app {
+    max-width: 420px;
+    margin: 54px auto;
+    background: linear-gradient(135deg,#fbeee6 50%, #dff7fa 100%);
+    border-radius: 26px;
+    box-shadow: 0 8px 32px rgba(80,150,255,0.14), 0 1.5px 18px #eaf3f7;
+    padding: 36px 30px 30px 30px;
+    font-family: 'Segoe UI', sans-serif;
+}
+.todo-title {
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 2.4rem;
+    color: #1e243a;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+    text-shadow: 0 2px 8px #cbd2ff44;
+}
+.todo-input-group {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.todo-input {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #293857;
+    padding: 18px 28px;
+    min-height: 3.0rem;
+    border: 2.5px solid #7dc6fb;
+    background: #f8fafb;
+    border-radius: 10px 0 0 10px;
+    outline: none;
+    box-shadow: 0 2px 12px 0 #dbefff1c;
+    transition: border 0.22s, box-shadow 0.17s, background 0.2s, font-size 0.18s;
+}
+.todo-input:hover {
+    border: 2.5px solid #54b4ec;
+    box-shadow: 0 4px 22px 0 #83d0ff4a;
+    background: linear-gradient(90deg, #f7fdff 60%, #bee5ff35 100%);
+}
+.todo-input:focus {
+    border: 2.5px solid #37a9f7;
+    box-shadow: 0 0 0 8px #a5e5ff82, 0 6px 32px #1e80ff38;
+    background: linear-gradient(90deg, #ecf4ff 40%, #e7f6fc 100%);
+}
+.todo-add-btn {
+    background: linear-gradient(90deg,#1e90ff 50%,#6eafff 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 0 8px 8px 0;
+    font-weight: 600;
+    font-size: 1.12rem;
+    cursor: pointer;
+    opacity: 1;
+    transition: background 0.18s, box-shadow 0.2s, transform 0.15s;
+    box-shadow: 0 2px 6px #bce6ff33;
+}
+.todo-add-btn:hover,.todo-add-btn:focus {
+    background: linear-gradient(90deg,#197be7 60%,#1493fc 100%);
+    box-shadow: 0 4px 14px #90cdf588, 0 1px 6px #bce6ff33;
+    transform: scale(1.06);
+}
+.todo-add-btn[disabled] {
+    cursor: not-allowed;
+    opacity: 0.5;
+    background: #ccc;
+}
+.todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.todo-item {
+    background: linear-gradient(90deg, #e0eafd 80%, #f6efe3 100%);
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 18px;
+    margin-bottom: 18px;
+    box-shadow: 0 1.5px 10px #94b7fc1b, 0 2px 4px #ffeec955;
+    animation: fadein 0.8s;
+}
+@keyframes fadein {
+    from { opacity:0; transform: translateY(17px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+.todo-text {
+    font-size: 1.33rem;
+    color: #1d305d;
+    text-shadow: 0 1.5px 9px #fff1e898;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.44;
+    transition: font-size 0.2s, color 0.16s;
+}
+.dark-mode .todo-text {
+    font-size: 1.33rem;
+    color: #f3fcff;
+    text-shadow: 0 2px 7px #050c1888;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+.todo-actions {
+    display: flex;
+    gap: 9px;
+}
+.todo-move-up-btn,
+.todo-move-down-btn,
+.todo-delete-btn {
+    border: none;
+    border-radius: 7px;
+    color: white;
+    padding: 8px 14px;
+    font-size: 1.12rem;
+    transition: background 0.2s, box-shadow 0.22s, transform 0.17s, opacity 0.16s;
+    cursor: pointer;
+    opacity: 0.94;
+    outline: none;
+    box-shadow: 0 1px 5px #85cdfa22;
+}
+.todo-move-up-btn {
+    background: linear-gradient(90deg, #2ecc71 70%, #77e1a4 100%);
+}
+.todo-move-up-btn:hover,.todo-move-up-btn:focus {
+    background: linear-gradient(90deg, #28b866 70%, #52c290 100%);
+    box-shadow: 0 6px 24px #b6ffee77;
+    transform: scale(1.12) rotate(-7deg);
+    opacity: 1;
+}
+.todo-move-down-btn {
+    background: linear-gradient(90deg, #f8b62c 80%, #ffe38d 100%);
+    color: #603b05;
+}
+.todo-move-down-btn:hover,.todo-move-down-btn:focus {
+    background: linear-gradient(90deg, #ec9407 80%, #ffd24e 100%);
+    box-shadow: 0 6px 24px #fff7cd96;
+    transform: scale(1.12) rotate(7deg);
+    opacity: 1;
+}
+.todo-delete-btn {
+    background: linear-gradient(90deg, #fb4141 75%, #ff9898 100%);
+}
+.todo-delete-btn:hover,.todo-delete-btn:focus {
+    background: linear-gradient(90deg, #d63031 70%, #f68b8b 100%);
+    box-shadow: 0 9px 30px #ffafaf95;
+    transform: scale(1.13) rotate(-2deg);
+    opacity: 1;
+}
+.todo-edit-btn {
+  background: linear-gradient(90deg, #4f8cff 70%, #67d0ff 100%);
+  color: #173054;
+  border: none;
+  border-radius: 7px;
+  padding: 8px 14px;
+  font-size: 1.12rem;
+  font-weight: 600;
+  transition: background 0.18s, box-shadow 0.2s, transform 0.13s, opacity 0.15s;
+  cursor: pointer;
+  box-shadow: 0 2px 7px #67b6fa22;
+  opacity: 0.95;
+}
+.todo-edit-btn:hover, .todo-edit-btn:focus {
+  background: linear-gradient(90deg, #285ea8 80%, #51c1f6 100%);
+  color: #0d223d;
+  box-shadow: 0 6px 20px #badeff85;
+  opacity: 1;
+  transform: scale(1.11) rotate(-2deg);
+}
+.dark-mode .todo-edit-btn {
+  background: linear-gradient(90deg, #37528a 85%, #2262a7 100%);
+  color: #eaffff;
+  box-shadow: 0 2px 10px #0e203218;
+}
+.dark-mode .todo-edit-btn:hover, .dark-mode .todo-edit-btn:focus {
+  background: linear-gradient(90deg, #2461a4 80%, #51bffc 100%);
+  color: #95e7ff;
+  box-shadow: 0 6px 19px #5eb5e6c4;
+  opacity: 1;
+  transform: scale(1.12) rotate(-3deg);
+}
+.todo-actions button[disabled] {
+    opacity: 0.4 !important;
+    cursor: not-allowed;
+    box-shadow:none;
+    filter: grayscale(40%);
+}
+.dark-mode .todo-input {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #eaecfd;
+    padding: 18px 28px;
+    min-height: 3.6rem;
+    border: 2.5px solid #406faa;
+    background: #232947;
+    border-radius: 13px 0 0 13px;
+    box-shadow: 0 2px 18px 0 #29458532;
+}
+.dark-mode .todo-input:hover {
+    border: 2.5px solid #58bae0;
+    box-shadow: 0 4px 19px #31b6ff86;
+    background: linear-gradient(90deg, #1b2236 60%, #264373 100%);
+}
+.dark-mode .todo-input:focus {
+    border: 2.5px solid #79dbfd;
+    box-shadow: 0 0 0 8px #16fffb50, 0 9px 36px #7064ea3d;
+    background: linear-gradient(90deg, #1c233f 40%, #244063 100%);
+}
