@@ -1,212 +1,111 @@
-import { useState, useEffect } from "react";
+import { useTodos } from "./hooks/useTodos";
 
-const translations = {
-  en: {
-    title: "ToDo List",
-    placeholder: "Add a new task...",
-    add: "Add",
-    edit: "Edit",
-    up: "▲",
-    down: "▼",
-    delete: "🗑",
-  },
-  bg: {
-    title: "Списък със задачи",
-    placeholder: "Добави нова задача...",
-    add: "Добави",
-    edit: "Редактирай",
-    up: "▲",
-    down: "▼",
-    delete: "🗑",
-  }
-};
-
-export default function ToDoList({ language = "en" }) {
-  const t = translations[language];
-  const [taskList, setTaskList] = useState([]);
-  const [task, setTask] = useState("");
-  const [editingTaskId, setEditingTaskId] = useState(null);
-
-  useEffect(() => {
-    loadTasks();
-  }, []);
-
-  async function loadTasks() {
-    try {
-      const response = await fetch("/api/ToDo");
-
-      if (!response.ok) {
-        throw new Error("Failed to fetch tasks");
-      }
-
-      const data = await response.json();
-      setTaskList(data);
-    } catch (error) {
-      console.error("Error fetching tasks:", error);
-    }
-  }
-
-  async function handleAddTask() {
-    const trimmedTask = task.trim();
-    if (trimmedTask === "") return;
-
-    try {
-      if (editingTaskId !== null) {
-        const currentTask = taskList.find(t => t.id === editingTaskId);
-
-        const response = await fetch(`/api/ToDo/${editingTaskId}`, {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            title: trimmedTask,
-            isCompleted: currentTask?.isCompleted ?? false,
-          }),
-        });
-
-        if (!response.ok) {
-          throw new Error("Failed to update task");
-        }
-
-        setEditingTaskId(null);
-      } else {
-        const response = await fetch("/api/ToDo", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            title: trimmedTask,
-            isCompleted: false,
-          }),
-        });
-
-        if (!response.ok) {
-          throw new Error("Failed to add task");
-        }
-      }
-
-      setTask("");
-      await loadTasks();
-    } catch (error) {
-      console.error("Error saving task:", error);
-    }
-  }
-
-  async function handleDeleteTask(id) {
-    try {
-      const response = await fetch(`/api/ToDo/${id}`, {
-        method: "DELETE",
-      });
-
-      if (!response.ok) {
-        throw new Error("Failed to delete task");
-      }
-
-      await loadTasks();
-    } catch (error) {
-      console.error("Error deleting task:", error);
-    }
-  }
-
-  function handleEditTask(taskItem) {
-    setTask(taskItem.title);
-    setEditingTaskId(taskItem.id);
-  }
-
-  async function handleMoveTaskUp(id) {
-    try {
-      const response = await fetch(`/api/ToDo/${id}/move-up`, {
-        method: "PUT",
-      });
-
-      if (!response.ok) {
-        throw new Error("Failed to move task up");
-      }
-
-      await loadTasks();
-    } catch (error) {
-      console.error("Error moving task up:", error);
-    }
-  }
-
-  async function handleMoveTaskDown(id) {
-    try {
-      const response = await fetch(`/api/ToDo/${id}/move-down`, {
-        method: "PUT",
-      });
-
-      if (!response.ok) {
-        throw new Error("Failed to move task down");
-      }
-
-      await loadTasks();
-    } catch (error) {
-      console.error("Error moving task down:", error);
-    }
-  }
+export default function ToDoList({ t }) {
+  const {
+    taskList,
+    task,
+    setTask,
+    editingTaskId,
+    isLoading,
+    saveTask,
+    deleteTask,
+    startEdit,
+    moveTaskUp,
+    moveTaskDown,
+  } = useTodos(t);
 
   return (
-    <div className="todo-app">
-      <h1 className="todo-title">{t.title}</h1>
+    <div className="mx-auto w-full max-w-3xl">
+      <div className="overflow-hidden rounded-[28px] border border-white/40 bg-white/75 shadow-2xl shadow-slate-300/30 backdrop-blur-xl dark:border-slate-700/60 dark:bg-slate-900/70 dark:shadow-black/30">
+        <div className="border-b border-slate-200/70 bg-gradient-to-r from-blue-600 via-indigo-600 to-sky-500 px-6 py-6 text-white dark:border-slate-800/80 sm:px-8">
+          <h2 className="text-2xl font-bold sm:text-3xl">{t.appTitle}</h2>
+          <p className="mt-2 text-sm text-blue-100">
+            Organize, edit and reorder your daily tasks.
+          </p>
+        </div>
 
-      <div className="todo-input-group">
-        <input
-          className="todo-input"
-          type="text"
-          placeholder={t.placeholder}
-          value={task}
-          onChange={(e) => setTask(e.target.value)}
-          onKeyDown={(e) => {
-            if (e.key === "Enter") handleAddTask();
-          }}
-        />
+        <div className="p-6 sm:p-8">
+          <div className="mb-8 flex flex-col gap-3 sm:flex-row">
+            <input
+              className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-base outline-none transition duration-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 dark:focus:border-blue-400"
+              type="text"
+              placeholder={t.placeholder}
+              value={task}
+              onChange={(e) => setTask(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") saveTask();
+              }}
+            />
 
-        <button className="todo-add-btn" onClick={handleAddTask}>
-          {editingTaskId !== null ? t.edit : t.add}
-        </button>
-      </div>
+            <button
+              onClick={saveTask}
+              className="rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 px-5 py-3 font-semibold text-white shadow-lg shadow-blue-500/20 transition duration-200 hover:scale-[1.02] hover:from-blue-700 hover:to-indigo-700 active:scale-[0.98]"
+            >
+              {editingTaskId !== null ? t.edit : t.add}
+            </button>
+          </div>
 
-      <ul className="todo-list">
-        {taskList.map((taskItem, index) => (
-          <li className="todo-item" key={taskItem.id}>
-            <span className="todo-text">{taskItem.title}</span>
-
-            <div className="todo-actions">
-              <button
-                className="todo-edit-btn"
-                onClick={() => handleEditTask(taskItem)}
-              >
-                {t.edit}
-              </button>
-
-              <button
-                className="todo-move-up-btn"
-                onClick={() => handleMoveTaskUp(taskItem.id)}
-                disabled={index === 0}
-              >
-                {t.up}
-              </button>
-
-              <button
-                className="todo-move-down-btn"
-                onClick={() => handleMoveTaskDown(taskItem.id)}
-                disabled={index === taskList.length - 1}
-              >
-                {t.down}
-              </button>
-
-              <button
-                className="todo-delete-btn"
-                onClick={() => handleDeleteTask(taskItem.id)}
-              >
-                {t.delete}
-              </button>
+          {isLoading ? (
+            <div className="rounded-2xl border border-dashed border-slate-300 bg-slate-50 p-6 text-center text-slate-500 dark:border-slate-700 dark:bg-slate-800/40 dark:text-slate-400">
+              Loading...
             </div>
-          </li>
-        ))}
-      </ul>
+          ) : taskList.length === 0 ? (
+            <div className="rounded-2xl border border-dashed border-slate-300 bg-slate-50 p-6 text-center text-slate-500 dark:border-slate-700 dark:bg-slate-800/40 dark:text-slate-400">
+              {t.empty}
+            </div>
+          ) : (
+            <ul className="space-y-4">
+              {taskList.map((taskItem, index) => (
+                <li
+                  key={taskItem.id}
+                  className="group flex flex-col gap-4 rounded-2xl border border-slate-200 bg-gradient-to-r from-slate-50 to-white p-4 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-md dark:border-slate-800 dark:from-slate-900 dark:to-slate-950 dark:hover:border-slate-700 sm:flex-row sm:items-center sm:justify-between"
+                >
+                  <div className="min-w-0">
+                    <span className="block truncate text-base font-semibold text-slate-800 dark:text-slate-100">
+                      {taskItem.title}
+                    </span>
+                    <span className="mt-1 block text-xs text-slate-400 dark:text-slate-500">
+                      #{index + 1}
+                    </span>
+                  </div>
+
+                  <div className="flex flex-wrap gap-2">
+                    <button
+                      onClick={() => startEdit(taskItem)}
+                      className="rounded-xl bg-sky-600 px-3 py-2 text-sm font-medium text-white transition hover:bg-sky-700"
+                    >
+                      {t.edit}
+                    </button>
+
+                    <button
+                      onClick={() => moveTaskUp(taskItem.id)}
+                      disabled={index === 0}
+                      className="rounded-xl bg-emerald-600 px-3 py-2 text-sm font-medium text-white transition hover:bg-emerald-700 disabled:cursor-not-allowed disabled:opacity-50"
+                    >
+                      {t.up}
+                    </button>
+
+                    <button
+                      onClick={() => moveTaskDown(taskItem.id)}
+                      disabled={index === taskList.length - 1}
+                      className="rounded-xl bg-amber-500 px-3 py-2 text-sm font-medium text-slate-900 transition hover:bg-amber-600 disabled:cursor-not-allowed disabled:opacity-50"
+                    >
+                      {t.down}
+                    </button>
+
+                    <button
+                      onClick={() => deleteTask(taskItem.id)}
+                      className="rounded-xl bg-rose-600 px-3 py-2 text-sm font-medium text-white transition hover:bg-rose-700"
+                    >
+                      {t.delete}
+                    </button>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </div>
     </div>
   );
 }
