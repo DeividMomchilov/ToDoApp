@@ -1,6 +1,15 @@
 @ToDoApp_HostAddress = http://localhost:5192
 
-GET {{ToDoApp_HostAddress}}/
-Accept: application/json
+### 1. Create a new task (Click "Send Request" right above this line)
+POST {{ToDoApp_HostAddress}}/api/todo
+Content-Type: application/json
 
-###
+{
+  "title": "My first real database task!",
+  "isCompleted": false,
+  "position": 0
+}
+
+### 2. Get all tasks (Click "Send Request" right above this line)
+GET {{ToDoApp_HostAddress}}/api/todo
+Accept: application/json

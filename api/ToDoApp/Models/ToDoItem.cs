@@ -16,5 +16,8 @@ namespace ToDoApp.Models
 
         [Required]
         public int Position { get; set; }
+
+        [Required]
+        public string UserId { get; set; } = null!;
     }
 }
