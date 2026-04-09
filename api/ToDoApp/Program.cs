@@ -1,5 +1,6 @@
 
 using Microsoft.EntityFrameworkCore;
+using ToDoApp.Data;
 
 namespace ToDoApp
 {
@@ -20,13 +21,13 @@ namespace ToDoApp
             builder.Services.AddCors(options =>
             {
                 options.AddPolicy("AllowReactApp",
-                    policy => policy.WithOrigins("http://localhost:3000")
+                    policy => policy.WithOrigins("http://localhost:5174")
                                     .AllowAnyHeader()
                                     .AllowAnyMethod());
             });
 
             builder.Services.AddOpenApi();
-            builder.Services.AddDbContext<Data.ApplicationDbContext>(options =>
+            builder.Services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(connectionString));
 
 
@@ -40,9 +41,10 @@ namespace ToDoApp
             }
 
             app.UseHttpsRedirection();
+            app.UseCors("AllowReactApp");
 
-            app.UseAuthentication();
-            app.UseAuthorization();
+            // app.UseAuthentication();
+            // app.UseAuthorization();
 
             app.MapControllers();
 
