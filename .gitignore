@@ -7,22 +7,28 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# React / Vite
+node_modules/
+dist/
+dist-ssr/
 *.local
 
-# Editor directories and files
+# Editor / IDE
 .vscode/*
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
 *.suo
+*.user
+*.userosscache
+*.sln.docstates
 *.ntvs*
 *.njsproj
-*.sln
 *.sw?
 
+# .NET
 [Bb]in/
 [Oo]bj/
+.vs/
+**/.vs/
 appsettings.Development.json

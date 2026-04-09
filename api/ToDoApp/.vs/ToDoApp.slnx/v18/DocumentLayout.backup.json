@@ -1,34 +1,45 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Deivid\\source\\repos\\ToDoApp\\",
+  "WorkspaceRootPath": "C:\\Programing\\Web Development\\Demos\\ToDoApp\\api\\ToDoApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CFC5892B-E522-4510-990E-696221F0450E}|ToDoApp.csproj|c:\\users\\deivid\\source\\repos\\todoapp\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CFC5892B-E522-4510-990E-696221F0450E}|ToDoApp.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0E1FC31A-B2B1-B8B9-4A0A-B10C59FB9880}|ToDoApp.csproj|c:\\programing\\web development\\demos\\todoapp\\api\\todoapp\\todoapp.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{0E1FC31A-B2B1-B8B9-4A0A-B10C59FB9880}|ToDoApp.csproj|solutionrelative:todoapp.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFC5892B-E522-4510-990E-696221F0450E}|ToDoApp.csproj|c:\\users\\deivid\\source\\repos\\todoapp\\models\\todoitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CFC5892B-E522-4510-990E-696221F0450E}|ToDoApp.csproj|solutionrelative:models\\todoitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0E1FC31A-B2B1-B8B9-4A0A-B10C59FB9880}|ToDoApp.csproj|c:\\programing\\web development\\demos\\todoapp\\api\\todoapp\\controllers\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E1FC31A-B2B1-B8B9-4A0A-B10C59FB9880}|ToDoApp.csproj|solutionrelative:controllers\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFC5892B-E522-4510-990E-696221F0450E}|ToDoApp.csproj|c:\\users\\deivid\\source\\repos\\todoapp\\common\\entityvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CFC5892B-E522-4510-990E-696221F0450E}|ToDoApp.csproj|solutionrelative:common\\entityvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0E1FC31A-B2B1-B8B9-4A0A-B10C59FB9880}|ToDoApp.csproj|c:\\programing\\web development\\demos\\todoapp\\api\\todoapp\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E1FC31A-B2B1-B8B9-4A0A-B10C59FB9880}|ToDoApp.csproj|solutionrelative:migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFC5892B-E522-4510-990E-696221F0450E}|ToDoApp.csproj|c:\\users\\deivid\\source\\repos\\todoapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CFC5892B-E522-4510-990E-696221F0450E}|ToDoApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Programing\\Web Development\\Demos\\ToDoApp\\api\\ToDoApp\\Migrations\\20260409083542_InitialMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260409083542_InitialMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFC5892B-E522-4510-990E-696221F0450E}|ToDoApp.csproj|c:\\users\\deivid\\source\\repos\\todoapp\\todoapp.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{CFC5892B-E522-4510-990E-696221F0450E}|ToDoApp.csproj|solutionrelative:todoapp.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+      "AbsoluteMoniker": "D:0:0:{0E1FC31A-B2B1-B8B9-4A0A-B10C59FB9880}|ToDoApp.csproj|c:\\programing\\web development\\demos\\todoapp\\api\\todoapp\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E1FC31A-B2B1-B8B9-4A0A-B10C59FB9880}|ToDoApp.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFC5892B-E522-4510-990E-696221F0450E}|ToDoApp.csproj|c:\\users\\deivid\\source\\repos\\todoapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{CFC5892B-E522-4510-990E-696221F0450E}|ToDoApp.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{0E1FC31A-B2B1-B8B9-4A0A-B10C59FB9880}|ToDoApp.csproj|c:\\programing\\web development\\demos\\todoapp\\api\\todoapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E1FC31A-B2B1-B8B9-4A0A-B10C59FB9880}|ToDoApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFC5892B-E522-4510-990E-696221F0450E}|ToDoApp.csproj|c:\\users\\deivid\\source\\repos\\todoapp\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{CFC5892B-E522-4510-990E-696221F0450E}|ToDoApp.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Deivid\\AppData\\Roaming\\Microsoft\\UserSecrets\\b268dd8a-ac7e-4609-a83a-96877e1b3691\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E1FC31A-B2B1-B8B9-4A0A-B10C59FB9880}|ToDoApp.csproj|c:\\programing\\web development\\demos\\todoapp\\api\\todoapp\\models\\todoitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E1FC31A-B2B1-B8B9-4A0A-B10C59FB9880}|ToDoApp.csproj|solutionrelative:models\\todoitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E1FC31A-B2B1-B8B9-4A0A-B10C59FB9880}|ToDoApp.csproj|c:\\programing\\web development\\demos\\todoapp\\api\\todoapp\\common\\entityvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E1FC31A-B2B1-B8B9-4A0A-B10C59FB9880}|ToDoApp.csproj|solutionrelative:common\\entityvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E1FC31A-B2B1-B8B9-4A0A-B10C59FB9880}|ToDoApp.csproj|c:\\programing\\web development\\demos\\todoapp\\api\\todoapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0E1FC31A-B2B1-B8B9-4A0A-B10C59FB9880}|ToDoApp.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +49,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,50 +61,89 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "ToDoController.cs",
+              "DocumentMoniker": "C:\\Programing\\Web Development\\Demos\\ToDoApp\\api\\ToDoApp\\Controllers\\ToDoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ToDoController.cs",
+              "ToolTip": "C:\\Programing\\Web Development\\Demos\\ToDoApp\\api\\ToDoApp\\Controllers\\ToDoController.cs",
+              "RelativeToolTip": "Controllers\\ToDoController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAIwCUAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-09T09:09:52.167Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ApplicationDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Programing\\Web Development\\Demos\\ToDoApp\\api\\ToDoApp\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Programing\\Web Development\\Demos\\ToDoApp\\api\\ToDoApp\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeToolTip": "Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAUwC0AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-09T08:36:12.693Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "20260409083542_InitialMigration.cs",
+              "DocumentMoniker": "C:\\Programing\\Web Development\\Demos\\ToDoApp\\api\\ToDoApp\\Migrations\\20260409083542_InitialMigration.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260409083542_InitialMigration.cs",
+              "ToolTip": "C:\\Programing\\Web Development\\Demos\\ToDoApp\\api\\ToDoApp\\Migrations\\20260409083542_InitialMigration.cs",
+              "RelativeToolTip": "Migrations\\20260409083542_InitialMigration.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAADwvyUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-09T08:35:42.761Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "secrets.json",
+              "DocumentMoniker": "C:\\Users\\Deivid\\AppData\\Roaming\\Microsoft\\UserSecrets\\b268dd8a-ac7e-4609-a83a-96877e1b3691\\secrets.json",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Users\\Deivid\\AppData\\Roaming\\Microsoft\\UserSecrets\\b268dd8a-ac7e-4609-a83a-96877e1b3691\\secrets.json",
+              "ToolTip": "C:\\Users\\Deivid\\AppData\\Roaming\\Microsoft\\UserSecrets\\b268dd8a-ac7e-4609-a83a-96877e1b3691\\secrets.json",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Users\\Deivid\\AppData\\Roaming\\Microsoft\\UserSecrets\\b268dd8a-ac7e-4609-a83a-96877e1b3691\\secrets.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-09T08:29:49.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Deivid\\source\\repos\\ToDoApp\\Data\\ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Programing\\Web Development\\Demos\\ToDoApp\\api\\ToDoApp\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\Deivid\\source\\repos\\ToDoApp\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Programing\\Web Development\\Demos\\ToDoApp\\api\\ToDoApp\\Data\\ApplicationDbContext.cs",
               "RelativeToolTip": "Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAADwvwgAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-08T17:27:18.327Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EntityValidation.cs",
-              "DocumentMoniker": "C:\\Users\\Deivid\\source\\repos\\ToDoApp\\Common\\EntityValidation.cs",
-              "RelativeDocumentMoniker": "Common\\EntityValidation.cs",
-              "ToolTip": "C:\\Users\\Deivid\\source\\repos\\ToDoApp\\Common\\EntityValidation.cs",
-              "RelativeToolTip": "Common\\EntityValidation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-08T17:24:33.175Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "ToDoItem.cs",
-              "DocumentMoniker": "C:\\Users\\Deivid\\source\\repos\\ToDoApp\\Models\\ToDoItem.cs",
+              "DocumentMoniker": "C:\\Programing\\Web Development\\Demos\\ToDoApp\\api\\ToDoApp\\Models\\ToDoItem.cs",
               "RelativeDocumentMoniker": "Models\\ToDoItem.cs",
-              "ToolTip": "C:\\Users\\Deivid\\source\\repos\\ToDoApp\\Models\\ToDoItem.cs",
+              "ToolTip": "C:\\Programing\\Web Development\\Demos\\ToDoApp\\api\\ToDoApp\\Models\\ToDoItem.cs",
               "RelativeToolTip": "Models\\ToDoItem.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBQAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-08T17:21:15.729Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Deivid\\source\\repos\\ToDoApp\\appsettings.json",
+              "DocumentMoniker": "C:\\Programing\\Web Development\\Demos\\ToDoApp\\api\\ToDoApp\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\Deivid\\source\\repos\\ToDoApp\\appsettings.json",
+              "ToolTip": "C:\\Programing\\Web Development\\Demos\\ToDoApp\\api\\ToDoApp\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -102,41 +152,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\Deivid\\source\\repos\\ToDoApp\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "appsettings.Development.json",
-              "ToolTip": "C:\\Users\\Deivid\\source\\repos\\ToDoApp\\appsettings.Development.json",
-              "RelativeToolTip": "appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-08T17:20:26.382Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Deivid\\source\\repos\\ToDoApp\\Program.cs",
+              "DocumentMoniker": "C:\\Programing\\Web Development\\Demos\\ToDoApp\\api\\ToDoApp\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Deivid\\source\\repos\\ToDoApp\\Program.cs",
+              "ToolTip": "C:\\Programing\\Web Development\\Demos\\ToDoApp\\api\\ToDoApp\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-08T17:19:46.489Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "ToDoApp.http",
-              "DocumentMoniker": "C:\\Users\\Deivid\\source\\repos\\ToDoApp\\ToDoApp.http",
+              "DocumentMoniker": "C:\\Programing\\Web Development\\Demos\\ToDoApp\\api\\ToDoApp\\ToDoApp.http",
               "RelativeDocumentMoniker": "ToDoApp.http",
-              "ToolTip": "C:\\Users\\Deivid\\source\\repos\\ToDoApp\\ToDoApp.http",
+              "ToolTip": "C:\\Programing\\Web Development\\Demos\\ToDoApp\\api\\ToDoApp\\ToDoApp.http",
               "RelativeToolTip": "ToDoApp.http",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
               "WhenOpened": "2026-04-08T17:19:29.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EntityValidation.cs",
+              "DocumentMoniker": "C:\\Programing\\Web Development\\Demos\\ToDoApp\\api\\ToDoApp\\Common\\EntityValidation.cs",
+              "RelativeDocumentMoniker": "Common\\EntityValidation.cs",
+              "ToolTip": "C:\\Programing\\Web Development\\Demos\\ToDoApp\\api\\ToDoApp\\Common\\EntityValidation.cs",
+              "RelativeToolTip": "Common\\EntityValidation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T17:24:33.175Z",
               "EditorCaption": ""
             }
           ]
