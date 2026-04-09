@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+[Bb]in/
+[Oo]bj/
+appsettings.Development.json
