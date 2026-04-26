@@ -29,6 +29,3 @@ ToDoApp is a simple yet powerful task management application that helps users ma
 - Filter and search tasks
 - User authentication (if applicable)
 - Responsive design for mobile and desktop usage
-
-## Contributing
-Feel free to submit issues or pull requests with suggestions or improvements!
